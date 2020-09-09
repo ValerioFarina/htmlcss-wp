@@ -70,8 +70,8 @@ nav a:hover {
 main > section.center{
     width: calc(50% - 40px);
     float: left;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, .24);
     margin: 0 20px;
-    background-color: white;
 }
 
 main > aside.left, main > aside.right{
@@ -89,6 +89,7 @@ main .box {
     background-color: white;
     margin-bottom: 25px;
     padding: 25px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, .24);
     line-height: 30px;
 }
 
@@ -166,6 +167,9 @@ aside.right > .box.tag-cloud > a:hover {
 /* ---- Inizio sezione centrale ---- */
 
 main > section.center > .article {
+    background-color: white;
+    padding: 25px;
+    line-height: 30px;
     color: #666666;
     border-bottom: 1px solid rgba(0, 0, 0, .3);
 }
@@ -195,22 +199,46 @@ main > section.center > .article > .keywords > div {
     float: left;
 }
 
-main > section.center > .box > .keywords > .categories {
+main > section.center > .article > .keywords > .categories {
     margin-right: 20px;
 }
 
-main > section.center > .box > .keywords::after {
+main > section.center > .article > .keywords::after {
     content: "";
     display: table;
     clear: both;
 }
 /* ---- Fine sezione centrale ---- */
 
-
 /* ---- Fine main ---- */
 
 footer {
-    height: 60px;
-    background-color: green;
-    margin-top: 10px;
+    background-color: white;
+    margin-top: 25px;
+    padding: 40px;
+    color: #666666;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, .24);
+}
+
+footer > .copyright {
+    float: left;
+    font-size: 13px;
+}
+
+footer > .icons {
+    float: right;
+}
+
+footer::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+footer > .icons > span {
+    background-color: #6666664a;
+    border-radius: 100%;
+    display: inline-block;
+    padding: 6px;
+    margin: 0 2px;
 }
