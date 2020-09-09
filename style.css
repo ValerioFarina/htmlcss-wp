@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: sans-serif;
+    background-image: url("https://organicthemes.com/demo/natural-lite/wp-content/themes/natural-lite/images/default-pattern.png");
+}
+
+.container {
+    width: 90%;
+    margin: 25px auto 0 auto;
+}
+
+header {
+    background-image: url("https://organicthemes.com/demo/natural-lite/wp-content/themes/natural-lite/images/default-header.jpg");
+    background-size: cover;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    padding: 50px 0;
+    border: 10px solid white;
+}
+
+header > h1 {
+    margin-bottom: 10px;
+    font-size: 50px;
+}
+
+header > h2 {
+    font-weight: normal;
+}
+
+main:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+main > section.center{
+    background-color: red;
+    width: calc(50% - 40px);
+    float: left;
+    margin: 0 20px;
+}
+
+main > aside.left, main > aside.right{
+    width: 25%;
+    float: left;
+}
+
+main > aside.left {
+    background-color: blue;
+}
+
+aside.right > section.top, aside.right > section.bottom {
+    background-color: blue;
+}
+
+aside.right > section.top {
+    margin-bottom: 10px;
+}
+
+footer {
+    height: 60px;
+    background-color: green;
+    margin-top: 10px;
+}
