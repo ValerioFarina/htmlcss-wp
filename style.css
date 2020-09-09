@@ -68,10 +68,10 @@ nav a:hover {
 
 /* ---- Inizio main ---- */
 main > section.center{
-    background-color: red;
     width: calc(50% - 40px);
     float: left;
     margin: 0 20px;
+    background-color: white;
 }
 
 main > aside.left, main > aside.right{
@@ -162,6 +162,50 @@ aside.right > .box.tag-cloud > a:hover {
     text-decoration: underline;
 }
 /* ---- Fine sidebar di destra ---- */
+
+/* ---- Inizio sezione centrale ---- */
+
+main > section.center > .article {
+    color: #666666;
+    border-bottom: 1px solid rgba(0, 0, 0, .3);
+}
+
+main > section.center > .article > h3 {
+    text-transform: uppercase;
+    font-size: 30px;
+    color: rgba(0, 0, 0, .7);
+    margin-bottom: 10px;
+}
+
+main > section.center > .article > img {
+    width: 100%;
+    margin: 20px 0;
+}
+
+main > section.center > .article > p {
+    margin-bottom: 40px;
+}
+
+main > section.center > .article > .keywords {
+    background-color: rgba(235, 236, 242);
+    padding: 0 5px;
+}
+
+main > section.center > .article > .keywords > div {
+    float: left;
+}
+
+main > section.center > .box > .keywords > .categories {
+    margin-right: 20px;
+}
+
+main > section.center > .box > .keywords::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* ---- Fine sezione centrale ---- */
+
 
 /* ---- Fine main ---- */
 
