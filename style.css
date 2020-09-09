@@ -66,6 +66,37 @@ nav a:hover {
 }
 /* ---- Fine nav ---- */
 
+main .box {
+    background-color: white;
+    margin-bottom: 25px;
+    padding: 20px;
+}
+
+aside.left ul {
+    list-style-type: none;
+}
+
+aside.left > .box > h4 {
+    color: #504741;
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+aside.left > .box a {
+    display: block;
+    text-decoration: none;
+    color: #99cc33;
+    padding: 10px;
+    margin-bottom: 5px;
+    line-height: 20px;
+}
+
+aside.left > .box a:hover {
+    background-color: rgba(235, 236, 242);
+    text-decoration: underline;
+}
+
 main:after {
     content: "";
     display: table;
@@ -82,10 +113,6 @@ main > section.center{
 main > aside.left, main > aside.right{
     width: 25%;
     float: left;
-}
-
-main > aside.left {
-    background-color: blue;
 }
 
 aside.right > section.top, aside.right > section.bottom {
