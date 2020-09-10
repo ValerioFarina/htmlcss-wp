@@ -43,11 +43,12 @@ nav {
     margin-bottom: 25px;
 }
 
-nav li {
+nav > ul > li {
     display: inline-block;
+    position: relative;
 }
 
-nav a {
+nav > ul > li > a {
     text-decoration: none;
     color: rgba(255, 255, 255, .7);
     text-transform: uppercase;
@@ -58,6 +59,30 @@ nav a {
 
 nav a.about::after, nav a.templates::after  {
     content: "  ⯆";
+}
+
+nav li .menu {
+    display: none;
+    position: absolute;
+    background-color: #504741;
+    top: 50px;
+}
+
+nav > ul > li:hover .menu {
+    display: block;
+}
+
+nav .menu ul {
+    list-style-type: none;
+}
+
+nav .menu a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, .7);
+    padding: 10px 0 10px 15px;
+    width: 200px;
+    text-align: left;
+    display: block;
 }
 
 nav a:hover {
@@ -85,7 +110,7 @@ main:after {
     clear: both;
 }
 
-main .box {
+main > aside > .box {
     background-color: white;
     margin-bottom: 25px;
     padding: 25px;
@@ -116,57 +141,49 @@ aside.left > .box a {
 aside.left > .box a:hover {
     background-color: rgba(235, 236, 242);
     text-decoration: underline;
+    color: #81ac2b;
 }
 /* ---- Fine sidebar di sinistra ---- */
 
 /* ---- Inizio sidebar di destra ---- */
+.box.search > input, .box.search > button {
+    display: block;
+    float: left;
+}
+
 .box.search::after {
     content: "";
     display: table;
     clear: both;
 }
 
-aside.right > .box.search >  div {
-    float: left;
-}
-
-.box.search > .text {
-    width: 80%;
-    margin-right: 5px;
-}
-
-.box.search > .go {
-    width: calc(20% - 5px);
-}
-
-.box.search > .text > input {
-    width: 100%;
+.box.search > input {
+    width: calc(80% - 10px);
+    margin-right: 10px;
     height: 40px;
     font-size: 15px;
 }
 
-.box.search > .go > button {
-    width: 100%;
+.box.search > button {
+    width: 20%;
     height: 40px;
-    padding: 10px;
     background-color: #504741;
     color: rgba(255, 255, 255, .7);
 }
 
-aside.right > .box.tag-cloud > a {
+.box.tag-cloud > a {
     text-decoration: none;
     color: #99cc33;
 }
 
-aside.right > .box.tag-cloud > a:hover {
-    color: #84b02c;
+.box.tag-cloud > a:hover {
+    color: #81ac2b;
     text-decoration: underline;
 }
 /* ---- Fine sidebar di destra ---- */
 
 /* ---- Inizio sezione centrale ---- */
-
-main > section.center > .article {
+.article {
     background-color: white;
     padding: 25px;
     line-height: 30px;
@@ -174,44 +191,63 @@ main > section.center > .article {
     border-bottom: 1px solid rgba(0, 0, 0, .3);
 }
 
-main > section.center > .article > h3 {
+.article > h3 {
     text-transform: uppercase;
     font-size: 30px;
-    color: rgba(0, 0, 0, .7);
     margin-bottom: 10px;
 }
 
-main > section.center > .article > img {
+.article > h3 > a{
+    color: rgba(0, 0, 0, .7);
+    text-decoration: none;
+}
+
+.article > h3 > a:hover {
+    color: #81ac2b;
+    text-decoration: none;
+}
+
+.article a {
+    text-decoration: none;
+    color: #99cc33;
+}
+
+.article a:hover {
+    color: #81ac2b;
+    text-decoration: underline;
+}
+
+.article > img {
     width: 100%;
     margin: 20px 0;
 }
 
-main > section.center > .article > p {
+.article > p {
     margin-bottom: 40px;
 }
 
-main > section.center > .article > .keywords {
+.article > .keywords {
     background-color: rgba(235, 236, 242);
     padding: 0 5px;
 }
 
-main > section.center > .article > .keywords > div {
+.article > .keywords > div {
     float: left;
 }
 
-main > section.center > .article > .keywords > .categories {
+.article > .keywords > .categories {
     margin-right: 20px;
 }
 
-main > section.center > .article > .keywords::after {
+.article > .keywords::after {
     content: "";
     display: table;
     clear: both;
 }
 /* ---- Fine sezione centrale ---- */
-
 /* ---- Fine main ---- */
 
+/* ---- Inizio footer ---- */
 footer {
     background-color: white;
     margin-top: 25px;
@@ -235,10 +271,17 @@ footer::after {
     clear: both;
 }
 
-footer > .icons > span {
-    background-color: #6666664a;
+footer > .icons > a {
+    color: rgba(123, 133, 135);
+    background-color: rgba(235, 236, 242);
     border-radius: 100%;
     display: inline-block;
-    padding: 6px;
-    margin: 0 2px;
+    padding: 10px;
+    margin: 0 5px;
 }
+
+footer > .icons > a:hover {
+    background-color: white;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, .24);
+}
+/* ---- Fine footer ---- */
